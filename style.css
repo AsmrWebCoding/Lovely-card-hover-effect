@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css2?family=Lovers+Quarrel&display=swap');
+
+body{
+    background: #dadada;
+    
+  }
+  a{
+    color: #111;
+    
+  }
+  .photo{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+  }
+  .photo img{
+    width: 200px;
+    height: 330px;
+    object-fit: cover;
+    box-shadow: 10px 15px 25px 0 rgba(0,0,0,.5);
+    display: block;
+    transition: all .5s cubic-bezier(0.64, 0.04, 0.35, 1);
+    margin-top: -5px;
+  }
+  .photo:hover img{
+    box-shadow: 1px 1px 10px 0 rgba(0,0,0,.1);
+    padding: 5px;
+  }
+  .photo .glow-wrap{
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    margin-top: -10px;
+  }
+  .photo .glow{
+    display: block;
+    position:absolute;
+    width: 40%;
+    height: 200%;
+    background: #f1efef33;
+    top: 0;
+    filter: blur(1px);
+    transform: rotate(45deg) translate(-450%, 0);
+    transition: all .5s cubic-bezier(0.64, 0.04, 0.35, 1);
+  }
+  .photo:hover .glow{
+    transform: rotate(45deg) translate(450%, 0);
+    transition: all 1s cubic-bezier(0.645, 0.045, 0.355, 1);
+  }
+  .photo:hover img,
+  .photo:hover .glow-wrap{
+    margin-top: 0;
+  }
+  h1{
+    border-left: 3px solid #3d3313;
+    border-top: 3px solid #3d3313;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    transform: translate(-35%, -65%);
+    font-family: 'Lovers Quarrel', cursive;
+    font-weight: 600;
+    font-size: 2rem;
+    margin: 0;
+  }
+  
+  
